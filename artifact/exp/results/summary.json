@@ -1,0 +1,382 @@
+{
+ "paper": "First Device Models, Trained In-House",
+ "edition": "Third Edition (Process v1.0 reissue of the Second Edition, hardened paper-version 2.1, 2026-10-30)",
+ "consolidated": "2026-11-04",
+ "evidence_classes": {
+  "gate_results": "MEASURED - GATE49 runs recorded in the S8/S9 run records and the paper's registers (sections 8, 10, 11); per-question outputs for the Wave A/B model runs were not retained (section 10.6) and are NOT reconstructed here",
+  "abstainer": "MEASURED - run through the actual GATE49 scorer; per-question report preserved in the public supplement",
+  "wilson_intervals": "CALCULATED - Wilson 95% intervals as printed in paper section 11.4",
+  "flavor_prices": "REPORTED - Hugging Face Jobs public price list, framed in the paper (section 3.5) as rates observed 2026-10-27; no program record exists (disposition item AB-3)"
+ },
+ "sources": {
+  "S6_pilot_result_artifact": {
+   "file": "exp/pilot/results-6ae105dc41e90535df7686b7.json",
+   "sha256": "288f7fccf5fc5d782a16926f06469e90a7da17f43c60c676aa81bd1c2090ff84"
+  },
+  "S8_wave_a_finishing_record": {
+   "file": "exp/records/S8-wave-a-finishing-RUN.md",
+   "sha256": "365e40b4f73474df5258d8b81b1f2d3c329fdbc4e649fd5e855a9e1328ec8e66",
+   "note": "staged scrubbed copy; original is an internal record"
+  },
+  "S9_wave_b_record": {
+   "file": "exp/records/S9-wave-b-RUN.md",
+   "sha256": "ffdbb0816d74ad07f3258467b64833e6bd429927b59846fcad1975cefdd575c2",
+   "note": "staged scrubbed copy; original is an internal record"
+  },
+  "S2_edge_status_record": {
+   "file": "exp/records/S2-WAVE-STATUS.md",
+   "sha256": "e981b9c8983b9fec5452874987053a96c5c637ea90aafa0d492d0b5c5d63b15e",
+   "note": "staged scrubbed copy; the audit-Major source"
+  },
+  "abstainer_report": {
+   "file": "exp/waves-ab-supplement/gate-outputs/constant-abstainer/factuality-report.json",
+   "sha256": "2b3ea527d9eb7defa004867914ce1c7e547c5c9a9913f8bd58acca6287838f46"
+  }
+ },
+ "pilot_lfm3_voice": {
+  "base": "LiquidAI/LFM3-1.7B (LoRA adapter)",
+  "seed": {
+   "train_rows": 35,
+   "heldout_rows": 14,
+   "heldout_split": "12 unseen phrasings of trained functions + 2 of a function never shown in training"
+  },
+  "launches_total": 6,
+  "final_launch": {
+   "job": "6ae105dc41e90535df7686b7",
+   "runtime_s": 217,
+   "train_loss": 0.7614,
+   "function_names_correct": "1/14",
+   "full_exact_matches": "0/14",
+   "name_accuracy_field": 0.07142857142857142,
+   "full_exact_match_field": 0.0,
+   "json_parse_rate": "14/14 (computed for the second edition from the published artifact, paper section 4.5)"
+  },
+  "published_repo": "Thox-ai/lfm3-omni-voice-lora-pilot",
+  "reading": "Weak as model performance, strong as pipeline evidence; it did not produce a production voice adapter (paper section 1)."
+ },
+ "wave_a": {
+  "corpus": "train.jsonl, 205 rows (v5, including the 12 rows later excluded in Wave B hygiene)",
+  "gate": "GATE49, weights only, fleet Mac workstation Ollama 0.40.12 (paper sections 8.3, 11.4)",
+  "per_question_outputs_retained": false,
+  "models": {
+   "ThoxEdge-0.5B": {
+    "verdict": "FAIL",
+    "passed": 21,
+    "total": 49,
+    "mean": 2.837,
+    "hard_failures": 11,
+    "splits": null
+   },
+   "ThoxEdge-0.8B": {
+    "verdict": "FAIL",
+    "passed": 19,
+    "total": 49,
+    "mean": 2.714,
+    "hard_failures": 11,
+    "splits": null
+   },
+   "ThoxFlux-350M": {
+    "verdict": "FAIL",
+    "passed": 4,
+    "total": 49,
+    "mean": 0.898,
+    "hard_failures": 33,
+    "splits": null
+   },
+   "ThoxNano-135M": {
+    "verdict": "FAIL",
+    "passed": 2,
+    "total": 49,
+    "mean": 0.816,
+    "hard_failures": 32,
+    "splits": null
+   },
+   "ThoxNano-360M": {
+    "verdict": "ERROR",
+    "passed": null,
+    "total": 49,
+    "mean": null,
+    "hard_failures": null,
+    "splits": null,
+    "note": "Gate error: repetition loop, no score (paper status box, section 11.4)."
+   }
+  },
+  "splits_note": "Per-category splits for Wave A were not retained in the finishing record (paper status box); totals, means, and hard counts are the record.",
+  "gguf": {
+   "ThoxFlux-350M": {
+    "bytes": 229309120,
+    "sha256": "7526e4014ff8ed4e6707459c6b90bd862c2339ea4bbf4fce8e629f09c087f3fa"
+   },
+   "ThoxEdge-0.8B": {
+    "bytes": 529289280,
+    "sha256": "3b375f2971342c2cfeb9b5c97b68db8b35cb915d044555bb784dfde69b19310e"
+   },
+   "ThoxEdge-0.5B": {
+    "bytes": 397805088,
+    "sha256": "2192b7b4f2d19c25cad7ff386a9403e853638af54d7bf43917e977d3b6069438"
+   },
+   "ThoxNano-360M": {
+    "bytes": 270590080,
+    "sha256": "18cb1f5e83ecabe8dbdfe7bd535aeb3c653014396cc567938a8ce370fc3800a4"
+   },
+   "ThoxNano-135M": {
+    "bytes": 105453664,
+    "sha256": "aff370028ff25d5dbcf8080be5008fecf393c6b4a4f513df7299f2e07e9fe9ad"
+   }
+  }
+ },
+ "wave_b": {
+  "corpus": "train_wave_b.jsonl, 982 rows = 838 newly authored + 144 retained from the v5 corpus after hygiene (paper section 11.1); as-built SHA-256 9ddf814ddd6a5f057eab4842461bce24c7d2bc082ac1d26576b7cb6fcbfe50e8",
+  "gate": "GATE49, weights only, fleet Windows workstation Ollama 0.40.11 (paper section 11.4)",
+  "per_question_outputs_retained": false,
+  "models": {
+   "ThoxEdge-0.5B": {
+    "verdict": "FAIL",
+    "passed": 47,
+    "total": 49,
+    "mean": 4.837,
+    "hard_failures": 1,
+    "splits": {
+     "verified": [
+      11,
+      12
+     ],
+     "unknown": [
+      26,
+      26
+     ],
+     "known_false": [
+      10,
+      10
+     ],
+     "pricing": [
+      0,
+      1
+     ]
+    },
+    "decision": "Republished HF + Ollama (relative rule; documented baseline under the forward rule)"
+   },
+   "ThoxFlux-350M": {
+    "verdict": "FAIL",
+    "passed": 20,
+    "total": 49,
+    "mean": 2.49,
+    "hard_failures": null,
+    "splits": {
+     "verified": [
+      3,
+      12
+     ],
+     "unknown": [
+      9,
+      26
+     ],
+     "known_false": [
+      8,
+      10
+     ],
+     "pricing": [
+      0,
+      1
+     ]
+    },
+    "decision": "Improved, republished HF + Ollama"
+   },
+   "ThoxNano-360M": {
+    "verdict": "FAIL",
+    "passed": 23,
+    "total": 49,
+    "mean": 2.959,
+    "hard_failures": null,
+    "splits": {
+     "verified": [
+      3,
+      12
+     ],
+     "unknown": [
+      17,
+      26
+     ],
+     "known_false": [
+      2,
+      10
+     ],
+     "pricing": [
+      1,
+      1
+     ]
+    },
+    "decision": "First completed gate, republished HF + Ollama"
+   },
+   "ThoxNano-135M": {
+    "verdict": "FAIL",
+    "passed": 23,
+    "total": 49,
+    "mean": 3.0,
+    "hard_failures": null,
+    "splits": {
+     "verified": [
+      1,
+      12
+     ],
+     "unknown": [
+      14,
+      26
+     ],
+     "known_false": [
+      7,
+      10
+     ],
+     "pricing": [
+      1,
+      1
+     ]
+    },
+    "decision": "Improved, republished HF + Ollama"
+   },
+   "ThoxEdge-0.8B": {
+    "verdict": "INVALID MEASUREMENT",
+    "passed": 0,
+    "total": 49,
+    "mean": null,
+    "hard_failures": null,
+    "splits": null,
+    "note": "Every answer empty: a serving artifact (thinking-channel), not a model score. The Wave B artifact has never been validly measured; held, not published (paper section 11.5).",
+    "held_gguf": {
+     "bytes": 529296896,
+     "sha256": "183fb38e8c53999c3902371a456ab9e00e5ffc3251e316398b30d7beab77fe43"
+    }
+   },
+   "ThoxClip-Qwen3-0.6B": {
+    "verdict": "FAIL",
+    "passed": 22,
+    "total": 49,
+    "mean": 2.776,
+    "hard_failures": 14,
+    "splits": {
+     "verified": [
+      2,
+      12
+     ],
+     "unknown": [
+      11,
+      26
+     ],
+     "known_false": [
+      9,
+      10
+     ],
+     "pricing": [
+      0,
+      1
+     ]
+    },
+    "decision": "Finished with a grounding-required model card (paper section 11.7); gate ran on the fleet Mac workstation before its outage (section 11.4 sequence)"
+   }
+  },
+  "hard_failures_note": "Hard-failure counts are recorded here only where the run record states them (Edge-0.5B: sole hard failure is the pricing question; Clip: 14). The other Wave B rows' hard counts were not carried in the S9 summary table and are not reconstructed.",
+  "losses": {
+   "ThoxEdge-0.5B": 0.7093,
+   "ThoxEdge-0.8B": 0.5466,
+   "ThoxNano-360M": 1.515,
+   "ThoxFlux-350M": 1.6682,
+   "ThoxNano-135M": 1.6403
+  },
+  "conditions_delta": "Wave A: HF Jobs (t4-small / a10g-small), full-sequence loss, gate on fleet Mac workstation. Wave B: local trainer on the fleet Windows workstation, completion-only loss, gate on the fleet Windows workstation. The A-to-B delta is confounded by these condition changes; the paper reports it as an observed delta, not an ablation (sections 9.1, 11.4)."
+ },
+ "wilson_95": {
+  "note": "CALCULATED; as printed in paper section 11.4.",
+  "wave_b_totals": {
+   "ThoxEdge-0.5B": [
+    0.863,
+    0.989
+   ],
+   "ThoxFlux-350M": [
+    0.282,
+    0.548
+   ],
+   "ThoxNano-360M": [
+    0.337,
+    0.606
+   ],
+   "ThoxNano-135M": [
+    0.337,
+    0.606
+   ]
+  },
+  "wave_b_verified_recall": {
+   "ThoxEdge-0.5B": [
+    0.646,
+    0.985
+   ],
+   "ThoxFlux-350M": [
+    0.089,
+    0.532
+   ],
+   "ThoxNano-360M": [
+    0.089,
+    0.532
+   ],
+   "ThoxNano-135M": [
+    0.015,
+    0.354
+   ]
+  }
+ },
+ "constant_abstainer": {
+  "passed": 25,
+  "total": 49,
+  "mean": 3.531,
+  "hard_failures": 0,
+  "splits": {
+   "verified": [
+    1,
+    12
+   ],
+   "unknown": [
+    23,
+    26
+   ],
+   "known_false": [
+    0,
+    10
+   ],
+   "pricing": [
+    1,
+    1
+   ]
+  },
+  "verdict_in_report": null,
+  "note": "Prescribed decline form, run through the actual scorer for the hardening revision; per-question report preserved in the supplement."
+ },
+ "flavor_prices_reported": {
+  "a100-large": 2.5,
+  "a10g-small": 1.0,
+  "t4-small": 0.4,
+  "unit": "USD per hour",
+  "class": "REPORTED (HF Jobs public price list; observed 2026-10-27, paper section 3.5)"
+ },
+ "failure_taxonomy": {
+  "total_classes": 11,
+  "classes": [
+   "Private repository authorization",
+   "Remote code trust",
+   "Removed training configuration argument",
+   "Dataset shape contract",
+   "Unsupported numeric precision on the selected GPU",
+   "Positional upload call against a keyword-only function signature",
+   "Tokenizer chat template contract",
+   "Removed configuration argument recurring in the Wave B trainer",
+   "Tokenizer handoff defect",
+   "Model-load dependency defect",
+   "Factory finisher breakage against the current Ollama release"
+  ],
+  "categories": [
+   "Authorization boundaries",
+   "Interface drift",
+   "Data contracts",
+   "Hardware contracts"
+  ],
+  "audit_major_AB1": "CLOSED and re-verified line-by-line for this edition (see wp/qa/QA-REPORT.md): the seventh class (tokenizer chat template contract, from source S2) is present in the section 1 enumeration, the section 6.2 table (11 rows), and the section 6.5 category analysis; the relaunch jobs are in section 10.3 and the fix commit c250f9bb in section 10.5."
+ }
+}

@@ -1,0 +1,1284 @@
+[
+ [
+  [
+   "Device",
+   "Queued model",
+   "Base model recorded in the registry",
+   "Program"
+  ],
+  [
+   "ThoxKey",
+   "ThoxNano-135M",
+   "HuggingFaceTB/SmolLM-135M",
+   "Edge fast track"
+  ],
+  [
+   "ThoxAir",
+   "No queued assistant model",
+   "Not applicable",
+   "Gap recorded"
+  ],
+  [
+   "ThoxMini",
+   "ThoxEdge-0.8B",
+   "Qwen/Qwen3.5-0.8B",
+   "Edge fast track"
+  ],
+  [
+   "ThoxMini",
+   "ThoxEdge-0.5B",
+   "Qwen/Qwen2.5-0.5B-Instruct",
+   "Edge fast track"
+  ],
+  [
+   "ThoxClip",
+   "ThoxFlux-350M",
+   "LiquidAI/LFM2.5-350M",
+   "Edge fast track pathfinder"
+  ],
+  [
+   "ThoxClip",
+   "ThoxNano-360M",
+   "HuggingFaceTB/SmolLM-360M",
+   "Edge fast track"
+  ]
+ ],
+ [
+  [
+   "Flavor",
+   "Work assigned",
+   "Observed price",
+   "Selection reason"
+  ],
+  [
+   "a100-large",
+   "LFM3 voice command pilot",
+   "$2.50 per hour",
+   "A100 class compute is the known good shape for the LFM3 training and evaluation run"
+  ],
+  [
+   "a10g-small",
+   "ThoxEdge-0.8B follower",
+   "$1.00 per hour",
+   "Larger edge model in the follower wave"
+  ],
+  [
+   "t4-small",
+   "ThoxFlux-350M pathfinder and three followers",
+   "$0.40 per hour",
+   "Small models and a controlled pathfinder cost"
+  ]
+ ],
+ [
+  [
+   "Split",
+   "Rows",
+   "Purpose"
+  ],
+  [
+   "Train",
+   "35",
+   "Teach the output contract and trained functions"
+  ],
+  [
+   "Heldout",
+   "12",
+   "Test unseen phrasings of trained functions"
+  ],
+  [
+   "Heldout unseen function",
+   "2",
+   "Test timer.start, which never appears in training"
+  ],
+  [
+   "Total",
+   "49",
+   "Pilot seed"
+  ]
+ ],
+ [
+  [
+   "Function",
+   "Purpose"
+  ],
+  [
+   "mesh.device_status",
+   "Online state of one device or all devices"
+  ],
+  [
+   "mesh.health",
+   "Mesh wide health check"
+  ],
+  [
+   "briefing.generate",
+   "Morning, evening, or weekly briefing"
+  ],
+  [
+   "notes.capture",
+   "Capture a note"
+  ],
+  [
+   "content.summarize",
+   "Summarize inbox, chat, document, or calendar material"
+  ],
+  [
+   "device.set_mode",
+   "Set quiet, do not disturb, performance, or low power mode"
+  ],
+  [
+   "reminders.create",
+   "Create a reminder"
+  ],
+  [
+   "vision.describe",
+   "Describe a camera view or photo"
+  ],
+  [
+   "audio.transcribe",
+   "Transcribe a recording"
+  ],
+  [
+   "audio.translate",
+   "Translate speech"
+  ],
+  [
+   "thoxmind.route_advice",
+   "Decide whether a request should run on device or escalate"
+  ],
+  [
+   "timer.start",
+   "Held out unseen function probe"
+  ]
+ ],
+ [
+  [
+   "Setting",
+   "Value"
+  ],
+  [
+   "Base model",
+   "LiquidAI/LFM3-1.7B"
+  ],
+  [
+   "Adapter method",
+   "LoRA"
+  ],
+  [
+   "LoRA rank",
+   "16"
+  ],
+  [
+   "LoRA alpha",
+   "32"
+  ],
+  [
+   "LoRA dropout",
+   "0.0"
+  ],
+  [
+   "Target modules",
+   "q, k, v, o, gate, up, and down projections"
+  ],
+  [
+   "Training rows",
+   "35"
+  ],
+  [
+   "Batch size per device",
+   "4 (recorded in the training script; the completed run's 270 steps are 30 epochs at ceil(35 / 4) = 9 steps per epoch)"
+  ],
+  [
+   "Epochs",
+   "30"
+  ],
+  [
+   "Steps in the completed run",
+   "270"
+  ],
+  [
+   "Learning rate",
+   "0.0001"
+  ],
+  [
+   "Schedule",
+   "Cosine"
+  ],
+  [
+   "Warmup",
+   "10 percent, expressed through warmup_steps after the version 5 fix"
+  ],
+  [
+   "Precision",
+   "bf16 on A100 class compute"
+  ],
+  [
+   "Maximum sequence length",
+   "512"
+  ],
+  [
+   "Compute flavor",
+   "a100-large"
+  ]
+ ],
+ [
+  [
+   "Split",
+   "Function name accuracy",
+   "Full exact match"
+  ],
+  [
+   "Heldout, 12 rows",
+   "0.0833, 1 of 12",
+   "0.0, 0 of 12"
+  ],
+  [
+   "Heldout unseen function, 2 rows",
+   "0.0, 0 of 2",
+   "0.0, 0 of 2"
+  ],
+  [
+   "Overall, 14 rows",
+   "0.0714, 1 of 14",
+   "0.0, 0 of 14"
+  ]
+ ],
+ [
+  [
+   "Setting",
+   "Value"
+  ],
+  [
+   "Data",
+   "Thox-ai/thox-factory-sft-v5/train.jsonl"
+  ],
+  [
+   "Training rows",
+   "205"
+  ],
+  [
+   "Method",
+   "LoRA supervised fine tuning with TRL"
+  ],
+  [
+   "LoRA rank",
+   "32"
+  ],
+  [
+   "LoRA alpha",
+   "64"
+  ],
+  [
+   "LoRA dropout",
+   "0.0"
+  ],
+  [
+   "Target modules",
+   "q, k, v, o, gate, up, and down projections"
+  ],
+  [
+   "Epochs",
+   "3"
+  ],
+  [
+   "Learning rate",
+   "0.0001"
+  ],
+  [
+   "Schedule",
+   "Cosine"
+  ],
+  [
+   "Warmup",
+   "0.05 through warmup_steps after the version 5 fix"
+  ],
+  [
+   "Batch size per device",
+   "8"
+  ],
+  [
+   "Maximum sequence length",
+   "1024"
+  ],
+  [
+   "Output",
+   "LoRA merged into the base model"
+  ],
+  [
+   "Publication evidence",
+   "Merged weights plus training_summary.json"
+  ]
+ ],
+ [
+  [
+   "Measure",
+   "Verified result"
+  ],
+  [
+   "Dataset rows tokenized",
+   "205 of 205"
+  ],
+  [
+   "Base weight shards loaded",
+   "148 of 148"
+  ],
+  [
+   "Training steps",
+   "78 of 78"
+  ],
+  [
+   "Training time recorded for the step sequence",
+   "20.01 seconds"
+  ],
+  [
+   "Training loss",
+   "3.463"
+  ],
+  [
+   "Logged loss movement",
+   "6.257 to 2.544"
+  ],
+  [
+   "Mean token accuracy",
+   "0.6298"
+  ],
+  [
+   "Merged output",
+   "Shards written in the job workspace"
+  ]
+ ],
+ [
+  [
+   "Field",
+   "Verified value"
+  ],
+  [
+   "Repository",
+   "Thox-ai/ThoxFlux-350M"
+  ],
+  [
+   "New repository SHA",
+   "d0e42dd232c58b17451f911c166ee23c9af28339"
+  ],
+  [
+   "Repository last modified",
+   "2026-10-28T00:55:59Z (October 27, 2026, Central Time, the Kickstarter launch day this paper's subtitle refers to; timestamps in this paper are UTC unless a time zone is stated)"
+  ],
+  [
+   "Base model in summary",
+   "LiquidAI/LFM2.5-350M"
+  ],
+  [
+   "Training rows",
+   "205"
+  ],
+  [
+   "Epochs",
+   "3.0"
+  ],
+  [
+   "Learning rate",
+   "0.0001"
+  ],
+  [
+   "LoRA rank",
+   "32"
+  ],
+  [
+   "Training loss in summary",
+   "3.463227467659192"
+  ],
+  [
+   "Method in summary",
+   "LoRA SFT (TRL), merged"
+  ],
+  [
+   "Data in summary",
+   "Thox-ai/thox-factory-sft-v5/train.jsonl"
+  ],
+  [
+   "Required artifact",
+   "training_summary.json present"
+  ]
+ ],
+ [
+  [
+   "Model",
+   "Job",
+   "Flavor",
+   "State verified at launch check"
+  ],
+  [
+   "ThoxEdge-0.8B",
+   "6ae14e143fb22a235dd37ff4",
+   "a10g-small",
+   "RUNNING"
+  ],
+  [
+   "ThoxEdge-0.5B",
+   "6ae14e1f41e90535df76d4bb",
+   "t4-small",
+   "RUNNING"
+  ],
+  [
+   "ThoxNano-360M",
+   "6ae14e1f3fb22a235dd37ff8",
+   "t4-small",
+   "SCHEDULING"
+  ],
+  [
+   "ThoxNano-135M",
+   "6ae14e2041e90535df76d4bd",
+   "t4-small",
+   "SCHEDULING"
+  ]
+ ],
+ [
+  [
+   "#",
+   "Failure",
+   "Symptom and root cause",
+   "Fix",
+   "General lesson"
+  ],
+  [
+   "1",
+   "Private repository authorization",
+   "Pilot launch #1, job 6ae0eaed3fb22a235dd2fe79, failed before training. The bootstrap download received an unauthenticated 404 because Hugging Face Jobs did not inject a token able to read the owner's private repositories.",
+   "launch_job.py obtains the locally authenticated token in process and passes HF_TOKEN as a job secret.",
+   "Hosted compute identity and repository authorization are separate. Private data access must be granted explicitly and tested before training code runs."
+  ],
+  [
+   "2",
+   "Remote code trust in a non interactive job",
+   "Pilot launch #2, job 6ae0edc23fb22a235dd30268, loaded the private data but failed during model load. LFM3 ships custom code. Transformers attempted an interactive trust_remote_code prompt, the job reached end of file, and the library then raised a value error requiring trust_remote_code=True.",
+   "Add trust_remote_code=True to the tokenizer load and both model loads in the pilot script, then upload the script to the dataset repository.",
+   "Non interactive jobs cannot leave trust decisions to a prompt. Every load site must express the same decision, and custom code must be treated as an explicit dependency."
+  ],
+  [
+   "3",
+   "Removed training configuration argument (warmup_ratio)",
+   "Edge pathfinder #1, job 6ae0edfa41e90535df7662cc, failed when SFTConfig rejected warmup_ratio. The pilot's third launch, job 6ae0f48a3fb22a235dd30c7c, hit the same removal. Root cause, verified from the resolved wheels in the status record: Transformers 5.21 removed warmup_ratio from TrainingArguments; the rejection surfaces through TRL 1.16.0's SFTConfig, which subclasses it.",
+   "Replace warmup_ratio with warmup_steps, using 0.05 for the edge trainer and 0.1 for the pilot. In the resolved library, warmup_steps accepts a float in [0, 1) and interprets it as a ratio of total training steps, so the numeric value carried over unchanged; only the argument name and its type contract changed. Upload the corrected scripts to their dataset repositories.",
+   "A training configuration is code and must be tested against the resolved dependency version, not against the version assumed when the script was drafted."
+  ],
+  [
+   "4",
+   "Dataset shape contract",
+   "Pilot launch #4, job 6ae0f8c341e90535df76731d, and edge pathfinder #2, job 6ae0f83e41e90535df76725b, passed a list of message lists to Dataset.from_list. The datasets library expected dictionary rows and raised an attribute error when it attempted to read a row as a mapping.",
+   "Build dictionary rows in the form {\"messages\": messages} before calling Dataset.from_list in both trainers.",
+   "Conversational examples are not the same object as a columnar training dataset. Data shape should be validated with a local contract test before a GPU job is launched."
+  ],
+  [
+   "5",
+   "bf16 operation on a T4 GPU",
+   "Edge pathfinder #3, job 6ae0fd7a3fb22a235dd31c34, tokenized the corpus and loaded the base model, then failed on the first backward step. The TRL chunked log probability kernel called a matrix operation with bf16 input and float output. The Tesla T4 has compute capability 7.5; the operation requires compute capability 8.0 or higher.",
+   "Change the edge trainer to load with torch.float16 and set bf16=False and fp16=True in SFTConfig. Dataset repository commit fd8b4a2cc812de80defe966a7a64f00d5eba6fb6.",
+   "Accelerator selection and numeric precision form one decision. A framework default that works on an A100 can be invalid on a T4 even when the model fits in memory."
+  ],
+  [
+   "6",
+   "Positional upload call against a keyword-only signature (THOX script defect)",
+   "Pilot launch #5 completed training and evaluation but did not publish. Edge pathfinder #4 completed training but did not publish. The THOX scripts called HfApi.upload_folder with the local directory as the first positional argument. In the resolved huggingface_hub (verified 1.8.0 on the Mac host and 2.1.1 locally; the signature has been keyword-only with repo_id first since 1.0), that argument is validated as a repository identifier, so the local path failed repository-id validation. This is classified as a script defect in THOX code exposed by the resolved library signature, not as library drift: the call was wrong against the version that ran, and the status record's own verdict was \"our fault.\"",
+   "Call api.upload_folder(folder_path=..., repo_id=..., repo_type=..., commit_message=...). The pilot fix is associated with dataset repository commit e4f99fd; the edge fix is dataset repository commit 172283bd01b678c401b813d6e27e89ef12ba7a27.",
+   "Publication is a separate pipeline state. A training job is not complete for product purposes until the target repository contains the expected artifacts."
+  ],
+  [
+   "7",
+   "Tokenizer chat template contract",
+   "Both SmolLM follower jobs died before training a single step: ThoxNano-360M job 6ae14e1f3fb22a235dd37ff8 and ThoxNano-135M job 6ae14e2041e90535df76d4bd ended ERROR exit 1 during tokenization, with TRL raising ValueError: Cannot use chat template functions because tokenizer.chat_template is not set and no template argument was passed, 0 of 205 rows tokenized. SmolLM-360M and SmolLM-135M are base models whose tokenizers ship no chat_template; the other three edge bases (Qwen3.5-0.8B, Qwen2.5-0.5B-Instruct, LFM2.5-350M) all carry a native template, which is why the pathfinder and the other followers did not hit it.",
+   "train_edge_sft.py sets a ChatML chat template fallback only when the loaded tokenizer has none, matching the output repositories' own Modelfile inference contract. Dataset repository commit c250f9bb1b8e20b71f5c38c73ccfbcdac6a0303e. Both models were relaunched once each and completed (Section 10.3).",
+   "A base model is not a conversational model until its tokenizer contract says so. Asset assumptions belong in preflight: assert that the loaded tokenizer carries a chat template before launch, not after tokenization fails on remote compute."
+  ],
+  [
+   "8",
+   "Removed configuration argument, recurring off-rails (Wave B)",
+   "The Wave B retrain script train_wave_b.py, adapted from a local trainer rather than taken from the versioned dataset bundle, again passed warmup_ratio, and the resolved TRL SFTConfig again rejected it: failure 3 recurring in a second codebase, in the wave that did not run on the rails (Section 11.3).",
+   "Use the warmup_steps 0.05 ratio form, as in failure 3.",
+   "A fix that lives in one script is not a fix to the method. Until a preflight check rejects the removed argument, every new trainer draft re-imports the failure."
+  ],
+  [
+   "9",
+   "Tokenizer handoff defect (Wave B)",
+   "The Wave B trainer's first Nano retrains lost the ChatML fallback: SFTTrainer was constructed without processing_class, so it loaded a fresh tokenizer instead of the one the script had patched, and the template-less SmolLM bases failed exactly as in failure 7.",
+   "Pass the patched tokenizer explicitly (processing_class=tok).",
+   "State prepared before trainer construction is part of the run configuration; a handoff the framework performs silently must be asserted, not assumed."
+  ],
+  [
+   "10",
+   "Model-load dependency defect (Wave B)",
+   "Loading Qwen/Qwen3.5-0.8B through the generic AutoModelForCausalLM path pulled an image processor whose dependencies (PIL, torchvision) were absent on the training host, failing the load for a text-only job.",
+   "Fall back to the configuration's named text architecture class (Qwen3_5ForCausalLM).",
+   "A multimodal base's default load surface is larger than the task's; pin the class the job actually trains, and treat optional-dependency pulls as part of the environment contract."
+  ],
+  [
+   "11",
+   "Factory finisher broken against the current Ollama release (Wave A finishing)",
+   "The factory finisher scripts/finish_edge_model.py quantizes with ollama create -q q4_K_M from a GGUF; the current Ollama release refuses create-time quantization except for safetensors imports, so the finisher could not produce the Wave A GGUFs.",
+   "The manual llama.cpp pipeline (Section 8.2): convert_hf_to_gguf.py to f16, then llama-quantize to Q4_K_M, used for every Wave A and Wave B GGUF in this paper.",
+   "A finisher is a dependency on a moving external tool; pin the tool version or keep a manual path rehearsed. The finisher script itself remains unrepaired in the factory repository as of this edition."
+  ]
+ ],
+ [
+  [
+   "Model",
+   "Trained GGUF size",
+   "Trained GGUF SHA-256"
+  ],
+  [
+   "ThoxFlux-350M",
+   "229,309,120 B",
+   "7526e4014ff8ed4e6707459c6b90bd862c2339ea4bbf4fce8e629f09c087f3fa"
+  ],
+  [
+   "ThoxEdge-0.8B",
+   "529,289,280 B",
+   "3b375f2971342c2cfeb9b5c97b68db8b35cb915d044555bb784dfde69b19310e"
+  ],
+  [
+   "ThoxEdge-0.5B",
+   "397,805,088 B",
+   "2192b7b4f2d19c25cad7ff386a9403e853638af54d7bf43917e977d3b6069438"
+  ],
+  [
+   "ThoxNano-360M",
+   "270,590,080 B",
+   "18cb1f5e83ecabe8dbdfe7bd535aeb3c653014396cc567938a8ce370fc3800a4"
+  ],
+  [
+   "ThoxNano-135M",
+   "105,453,664 B",
+   "aff370028ff25d5dbcf8080be5008fecf393c6b4a4f513df7299f2e07e9fe9ad"
+  ]
+ ],
+ [
+  [
+   "Model",
+   "Result",
+   "Detail"
+  ],
+  [
+   "ThoxEdge-0.5B",
+   "FAIL",
+   "21/49 passed, 11 hard failures, score 2.837/5 (best of the wave)"
+  ],
+  [
+   "ThoxEdge-0.8B",
+   "FAIL",
+   "19/49 passed, 11 hard failures, score 2.714/5"
+  ],
+  [
+   "ThoxFlux-350M",
+   "FAIL",
+   "4/49 passed, 33 hard failures, score 0.898/5"
+  ],
+  [
+   "ThoxNano-135M",
+   "FAIL",
+   "2/49 passed, 32 hard failures, score 0.816/5"
+  ],
+  [
+   "ThoxNano-360M",
+   "ERROR",
+   "Gate could not complete: inference aborted twice with a token repeat limit error. No score."
+  ]
+ ],
+ [
+  [
+   "Claim",
+   "What the evidence supports",
+   "What it does not support"
+  ],
+  [
+   "The pilot pipeline works",
+   "Dataset download, training, greedy evaluation, adapter publication, results.json publication, and card completion all occurred on launch #6",
+   "Production voice quality or readiness for users"
+  ],
+  [
+   "The pilot adapter learned the command task",
+   "It produced one correct function name in 14 held out examples",
+   "Generalization, reliable argument generation, or safe unseen tool behavior"
+  ],
+  [
+   "ThoxFlux-350M training works",
+   "Two runs completed the training computation; run #5 published merged weights and a training summary",
+   "Device performance or user facing quality"
+  ],
+  [
+   "The edge wave completed and was finished",
+   "All five models trained and published; GGUF conversion, gate runs, card rewrites, Ollama publication, and smoke tests verified in the finishing record",
+   "Physical device qualification for any model"
+  ],
+  [
+   "Wave B scores rose after the retrain",
+   "The same 49 questions and scoring rules (Section 8.3), run after the retrain, produced higher totals and higher verified recall for the models with valid measurements in both waves (Section 11.4)",
+   "Attribution to the corpus alone: between waves the corpus, the trainer code, the training host and precision, the gate host, and the Ollama version all changed (tabled in Section 11.4), so the deltas are observed deltas, not isolated effects. A passing grade: every Wave B verdict remains FAIL under the gate's zero hard failure policy"
+  ],
+  [
+   "The ThoxAir bridge loop works on the bench",
+   "Speech input, transcript, intent, stateful dispatch, and spoken reply completed through the real client and server code on KnightHub",
+   "Physical Pi performance, real microphone quality, or deployment of the pilot adapter into that server"
+  ]
+ ],
+ [
+  [
+   "Artifact",
+   "Base model",
+   "License carried",
+   "Principal obligations",
+   "Where the notice appears"
+  ],
+  [
+   "Pilot adapter (Thox-ai/lfm3-omni-voice-lora-pilot)",
+   "LiquidAI/LFM3-1.7B",
+   "LFM Open License v1.0",
+   "Commercial use only below the $10,000,000 annual revenue threshold; separate Liquid AI license at or above it; automatic termination on non-compliance (license sections 5 and 11, per the card)",
+   "HF card frontmatter (license: other, license_name: lfm-open-license-v1.0, link to the base model's LICENSE) and the card's License section. Not published to Ollama"
+  ],
+  [
+   "ThoxFlux-350M",
+   "LiquidAI/LFM2.5-350M",
+   "LFM Open License v1.0",
+   "As above",
+   "HF card frontmatter (license: other) and card license text; the Ollama Modelfile LICENSE stanza states the license and the threshold warning, and the Ollama page carries the card text"
+  ],
+  [
+   "ThoxEdge-0.8B",
+   "Qwen/Qwen3.5-0.8B",
+   "Apache-2.0",
+   "Preserve copyright, license, and NOTICE information on distribution",
+   "HF card frontmatter (license: apache-2.0); Ollama Modelfile LICENSE stanza and page"
+  ],
+  [
+   "ThoxEdge-0.5B",
+   "Qwen/Qwen2.5-0.5B-Instruct",
+   "Apache-2.0",
+   "As above",
+   "As above"
+  ],
+  [
+   "ThoxNano-360M",
+   "HuggingFaceTB/SmolLM-360M",
+   "Apache-2.0",
+   "As above",
+   "As above"
+  ],
+  [
+   "ThoxNano-135M",
+   "HuggingFaceTB/SmolLM-135M",
+   "Apache-2.0",
+   "As above",
+   "As above"
+  ],
+  [
+   "ThoxClip-Qwen3-0.6B",
+   "Qwen/Qwen3-0.6B",
+   "Apache-2.0",
+   "As above",
+   "HF card frontmatter (license: apache-2.0) and the card's Licence and attribution section; Ollama Modelfile LICENSE stanza and page"
+  ]
+ ],
+ [
+  [
+   "ID",
+   "Source",
+   "What it establishes"
+  ],
+  [
+   "S1",
+   "~/workspace/lfm3-pilot-omni-voice/PILOT.md",
+   "Pilot objective, seed design, launch history, failures, evaluation gates, publication state, and close out"
+  ],
+  [
+   "S2",
+   "~/workspace/lfm3-pilot-omni-voice/edge/WAVE-STATUS.md",
+   "Edge inventory, pathfinder gate, all pathfinder outcomes, fixes, commits, follower launches, and finishing path"
+  ],
+  [
+   "S3",
+   "~/workspace/lfm3-pilot-omni-voice/model-card-lora-pilot.md",
+   "Pilot card, training configuration, published evaluation table, limitations, license, and provenance"
+  ],
+  [
+   "S4",
+   "THOX internal program log (internal record, not a public source)",
+   "Organization credit rule, launcher pattern, model card rule, registry context, finishing path, and license checkpoint, as recorded internally at the time"
+  ],
+  [
+   "S5",
+   "~/workspace/thoxair-audio-poc-20261027/RESULTS.md",
+   "ThoxAir bridge bench architecture, base model behavior, stateful exchanges, and physical hardware boundaries"
+  ],
+  [
+   "S6",
+   "~/workspace/lfm3-pilot-omni-voice/results-6ae105dc41e90535df7686b7.json",
+   "Published pilot result artifact with per row held out predictions and overall metrics"
+  ],
+  [
+   "S7",
+   "~/workspace/lfm3-pilot-omni-voice/train_lfm3_text_sft.py and ~/workspace/lfm3-pilot-omni-voice/edge/train_edge_sft.py",
+   "Canonical training configurations and corrected publication calls"
+  ],
+  [
+   "S8",
+   "~/workspace/edge-finishing-20261028/RUN.md",
+   "Wave A finishing record: GGUF conversion chain and hashes, gate results, card commits, Ollama registry verification, smoke tests, and the recorded deviations"
+  ],
+  [
+   "S9",
+   "~/workspace/wave-b-20261028/RUN.md",
+   "Wave B record: corpus construction and hygiene, retrain recipe and losses, gate results and publish decisions, the ThoxEdge-0.8B serving artifact analysis, publish commits, and the ThoxClip-Qwen3-0.6B finishing record"
+  ]
+ ],
+ [
+  [
+   "Launch",
+   "Job ID",
+   "Outcome recorded"
+  ],
+  [
+   "1",
+   "6ae0eaed3fb22a235dd2fe79",
+   "Failed before training on private repository authorization"
+  ],
+  [
+   "2",
+   "6ae0edc23fb22a235dd30268",
+   "Failed at model load on trust_remote_code"
+  ],
+  [
+   "3",
+   "6ae0f48a3fb22a235dd30c7c",
+   "Failed on Transformers version 5 warmup_ratio removal"
+  ],
+  [
+   "4",
+   "6ae0f8c341e90535df76731d",
+   "Failed at trainer construction on dataset shape"
+  ],
+  [
+   "5",
+   "6ae0fd7a41e90535df767a70",
+   "Training and evaluation completed; publication failed; scores 1 of 14 name and 0 of 14 exact"
+  ],
+  [
+   "6",
+   "6ae105dc41e90535df7686b7",
+   "Completed and published adapter plus results.json; pilot closed"
+  ]
+ ],
+ [
+  [
+   "Run",
+   "Model",
+   "Job ID",
+   "Outcome recorded"
+  ],
+  [
+   "Pathfinder 1",
+   "ThoxFlux-350M",
+   "6ae0edfa41e90535df7662cc",
+   "Failed on warmup_ratio"
+  ],
+  [
+   "Pathfinder 2",
+   "ThoxFlux-350M",
+   "6ae0f83e41e90535df76725b",
+   "Failed on dataset shape; one inspection reported CANCELED while logs showed the traceback"
+  ],
+  [
+   "Pathfinder 3",
+   "ThoxFlux-350M",
+   "6ae0fd7a3fb22a235dd31c34",
+   "Failed on bf16 operation support on the T4"
+  ],
+  [
+   "Pathfinder 4",
+   "ThoxFlux-350M",
+   "6ae140a541e90535df76cc68",
+   "Training completed; publication failed on upload_folder signature"
+  ],
+  [
+   "Pathfinder 5",
+   "ThoxFlux-350M",
+   "6ae1474d3fb22a235dd37b25",
+   "Completed (204 s running; finished 2026-10-28T00:56:07Z) and published merged weights plus training summary at repository SHA d0e42dd232c58b17451f911c166ee23c9af28339; training loss 3.463227467659192"
+  ],
+  [
+   "Follower",
+   "ThoxEdge-0.8B",
+   "6ae14e143fb22a235dd37ff4",
+   "Launched on a10g-small; verified RUNNING at launch check; then COMPLETED: merged weights and training_summary.json published 2026-10-28T01:25:18Z at repository SHA 1ca557d8c0c477cf357a744dfef3de16875d4ba1, training loss 1.4541844832591522, model.safetensors 1,504,827,288 B. Job runtime not recorded"
+  ],
+  [
+   "Follower",
+   "ThoxEdge-0.5B",
+   "6ae14e1f41e90535df76d4bb",
+   "Launched on t4-small; verified RUNNING at launch check; then COMPLETED: merged weights and training_summary.json published 2026-10-28T01:25:35Z at repository SHA 04e78ea6999872198426c744f354065fbe0fb080, training loss 1.6802658240000408, model.safetensors 988,097,536 B. Job runtime not recorded"
+  ],
+  [
+   "Follower",
+   "ThoxNano-360M",
+   "6ae14e1f3fb22a235dd37ff8",
+   "Launched on t4-small; verified SCHEDULING at launch check; then ERROR exit 1 on the tokenizer chat template contract (Section 6.2, class 7), started 2026-10-28T01:23:29Z, died 01:26:59Z, 0 of 205 rows tokenized"
+  ],
+  [
+   "Follower",
+   "ThoxNano-135M",
+   "6ae14e2041e90535df76d4bd",
+   "Launched on t4-small; verified SCHEDULING at launch check; then ERROR exit 1 on the tokenizer chat template contract (Section 6.2, class 7), started 2026-10-28T01:24:51Z, died 01:28:53Z"
+  ],
+  [
+   "Follower relaunch",
+   "ThoxNano-360M",
+   "6ae15d7a41e90535df76ddfa",
+   "Completed on t4-small after the ChatML fallback fix (211 s running; finished 2026-10-28T02:30:50Z); merged weights (SFT commit cc59bb2cd6993fbc6080865d198f94066fc8aeb8) and training summary (commit d3b4cad3237af627592d6a8355f9b11c40873fdf) published, training loss 3.1241229619735327, model.safetensors 723,674,624 B"
+  ],
+  [
+   "Follower relaunch",
+   "ThoxNano-135M",
+   "6ae15d7a41e90535df76ddfc",
+   "Completed on t4-small after the ChatML fallback fix (192 s running; finished 2026-10-28T02:32:20Z); merged weights (SFT commit bc30e4f053702ffe6f3e1e6c0958deebdb7432e1) and training summary (commit d3f76c2a546c96590b3ed973167224bc3d9bec70) published, training loss 3.273088284027882, model.safetensors 269,060,280 B"
+  ]
+ ],
+ [
+  [
+   "Repository",
+   "Role",
+   "Verified state used in this paper"
+  ],
+  [
+   "Thox-ai/lfm3-omni-voice-seed",
+   "Private pilot dataset and training bundle",
+   "Seed, conversational build, training script, and bootstrap versioned in the repository"
+  ],
+  [
+   "Thox-ai/lfm3-omni-voice-lora-pilot",
+   "Pilot adapter output",
+   "Adapter, results.json, tokenizer files, chat template, and completed README model card published"
+  ],
+  [
+   "Thox-ai/thox-edge-sft",
+   "Edge training bundle",
+   "Parameterized trainer and per model bootstrap scripts versioned in the repository"
+  ],
+  [
+   "Thox-ai/thox-factory-sft-v5",
+   "Edge training data",
+   "train.jsonl contains the 205 rows used by the edge wave"
+  ],
+  [
+   "Thox-ai/ThoxFlux-350M",
+   "Pathfinder output",
+   "SHA d0e42dd232c58b17451f911c166ee23c9af28339; merged weights and training_summary.json verified. Wave B republish commit 856bbdeadb909f6f8e1194ba90af671e6cd5052a"
+  ],
+  [
+   "Thox-ai/ThoxEdge-0.8B",
+   "Follower output",
+   "Trained and finished in Wave A (card commit db4403d7cb59a44db0fc88fad58deb819f5ace05); Wave B artifact held unpublished as a serving artifact case (Section 11.5)"
+  ],
+  [
+   "Thox-ai/ThoxEdge-0.5B",
+   "Follower output",
+   "Trained and finished in Wave A; Wave B republish commit 75065d2f288c60bd37842808e3d47efb4131542d"
+  ],
+  [
+   "Thox-ai/ThoxNano-360M",
+   "Follower output",
+   "Trained and finished in Wave A; Wave B republish commit e2b539111be1cbc678b41c887c0f61d02b950626"
+  ],
+  [
+   "Thox-ai/ThoxNano-135M",
+   "Follower output",
+   "Trained and finished in Wave A; Wave B republish commit 92cc969c2cad83daf7ea10e3d758c4675163b065"
+  ],
+  [
+   "Thox-ai/ThoxClip-Qwen3-0.6B",
+   "ThoxClip finishing output",
+   "Trained weights published at commit fed44e52024eeba2b922c92c41edd761118fc64f; repository HEAD (card) a53d46b963f627de8c7172e06225d4c9214349d5; gate 22/49 (Section 11.7). Corrected in this revision: the second edition printed a 42-character string as this commit, which matches no commit in the repository's history; see the provenance note in Section 11.7"
+  ]
+ ],
+ [
+  [
+   "Change or artifact",
+   "Repository",
+   "Commit or SHA"
+  ],
+  [
+   "Edge warmup_ratio to warmup_steps fix",
+   "Thox-ai/thox-edge-sft",
+   "e4064570f4ddb38ed73987d85941f697bf96d508"
+  ],
+  [
+   "Edge dataset dictionary row fix",
+   "Thox-ai/thox-edge-sft",
+   "360f543258fcd294f3b1ec25acb42b238f856409"
+  ],
+  [
+   "Edge fp16 fix for T4 compute capability 7.5",
+   "Thox-ai/thox-edge-sft",
+   "fd8b4a2cc812de80defe966a7a64f00d5eba6fb6"
+  ],
+  [
+   "Edge keyword argument upload_folder fix",
+   "Thox-ai/thox-edge-sft",
+   "172283bd01b678c401b813d6e27e89ef12ba7a27"
+  ],
+  [
+   "Edge ChatML chat template fallback for tokenizers shipping no chat_template",
+   "Thox-ai/thox-edge-sft",
+   "c250f9bb1b8e20b71f5c38c73ccfbcdac6a0303e"
+  ],
+  [
+   "Pilot keyword argument upload_folder fix",
+   "Thox-ai/lfm3-omni-voice-seed",
+   "e4f99fd"
+  ],
+  [
+   "Completed pilot model card upload",
+   "Thox-ai/lfm3-omni-voice-lora-pilot",
+   "faff8a32"
+  ],
+  [
+   "ThoxFlux-350M pre training base repack baseline",
+   "Thox-ai/ThoxFlux-350M",
+   "b5e34a706adab7ed6fdba4de645c1b2e71f05a3d"
+  ],
+  [
+   "ThoxFlux-350M trained publication state",
+   "Thox-ai/ThoxFlux-350M",
+   "d0e42dd232c58b17451f911c166ee23c9af28339"
+  ]
+ ],
+ [
+  [
+   "Model",
+   "Base",
+   "Wave B loss"
+  ],
+  [
+   "ThoxEdge-0.5B",
+   "Qwen/Qwen2.5-0.5B-Instruct",
+   "0.7093"
+  ],
+  [
+   "ThoxEdge-0.8B",
+   "Qwen/Qwen3.5-0.8B",
+   "0.5466"
+  ],
+  [
+   "ThoxNano-360M",
+   "HuggingFaceTB/SmolLM-360M",
+   "1.5150"
+  ],
+  [
+   "ThoxFlux-350M",
+   "LiquidAI/LFM2.5-350M",
+   "1.6682"
+  ],
+  [
+   "ThoxNano-135M",
+   "HuggingFaceTB/SmolLM-135M",
+   "1.6403"
+  ]
+ ],
+ [
+  [
+   "Model",
+   "Wave A",
+   "Wave B",
+   "Decision"
+  ],
+  [
+   "ThoxEdge-0.5B",
+   "FAIL 21/49, 2.837",
+   "FAIL 47/49, 4.837 (verified 11/12, unknown 26/26, known_false 10/10, pricing 0/1; sole hard failure = the pricing question, answered without the required decline)",
+   "Improved, republished HF + Ollama"
+  ],
+  [
+   "ThoxFlux-350M",
+   "FAIL 4/49, 0.898",
+   "FAIL 20/49, 2.49 (verified 3/12, unknown 9/26, known_false 8/10, pricing 0/1)",
+   "Improved, republished HF + Ollama"
+  ],
+  [
+   "ThoxNano-360M",
+   "ERROR (no score)",
+   "FAIL 23/49, 2.959 (verified 3/12, unknown 17/26, known_false 2/10, pricing 1/1)",
+   "First completed gate, republished HF + Ollama"
+  ],
+  [
+   "ThoxNano-135M",
+   "FAIL 2/49, 0.816",
+   "FAIL 23/49, 3.0 (verified 1/12, unknown 14/26, known_false 7/10, pricing 1/1)",
+   "Improved, republished HF + Ollama"
+  ],
+  [
+   "ThoxEdge-0.8B",
+   "FAIL 19/49, 2.714",
+   "Invalid measurement: 0/49 with every answer empty",
+   "Held, not published (Section 11.5)"
+  ]
+ ],
+ [
+  [
+   "Model",
+   "Wave A total (Wilson 95%)",
+   "Wave B total (Wilson 95%)",
+   "Verified recall, Wave B (of 12, Wilson 95%)"
+  ],
+  [
+   "ThoxEdge-0.5B",
+   "21/49 (0.300, 0.567)",
+   "47/49 (0.863, 0.989)",
+   "11/12 (0.646, 0.985)"
+  ],
+  [
+   "ThoxEdge-0.8B",
+   "19/49 (0.264, 0.528)",
+   "not validly measured",
+   "not validly measured"
+  ],
+  [
+   "ThoxFlux-350M",
+   "4/49 (0.032, 0.192)",
+   "20/49 (0.282, 0.548)",
+   "3/12 (0.089, 0.532)"
+  ],
+  [
+   "ThoxNano-360M",
+   "ERROR (no score)",
+   "23/49 (0.337, 0.606)",
+   "3/12 (0.089, 0.532)"
+  ],
+  [
+   "ThoxNano-135M",
+   "2/49 (0.011, 0.137)",
+   "23/49 (0.337, 0.606)",
+   "1/12 (0.015, 0.354)"
+  ],
+  [
+   "Constant abstainer (Section 8.3)",
+   "n/a",
+   "25/49",
+   "1/12"
+  ]
+ ],
+ [
+  [
+   "Condition",
+   "Wave A",
+   "Wave B"
+  ],
+  [
+   "Corpus",
+   "train.jsonl, 205 rows (v5, including the 12 rows later excluded)",
+   "train_wave_b.jsonl, 982 rows (hygiene-corrected)"
+  ],
+  [
+   "Trainer",
+   "factory train_edge_sft.py at commit c250f9bb1b8e20b71f5c38c73ccfbcdac6a0303e",
+   "local train_wave_b.py (no repository commit)"
+  ],
+  [
+   "Training host and precision",
+   "Hugging Face Jobs, t4-small / a10g-small, script defaults (fp16 load)",
+   "KnightHub (RTX 4060 Ti), fp32 weights with bf16 autocast"
+  ],
+  [
+   "Loss masking",
+   "full sequence (no completion-only setting)",
+   "completion-only (completion_only_loss=True)"
+  ],
+  [
+   "Gate host",
+   "TX083",
+   "KnightHub"
+  ],
+  [
+   "Ollama version",
+   "0.40.12",
+   "0.40.11"
+  ]
+ ],
+ [
+  [
+   "Tag",
+   "Build served",
+   "Source of record"
+  ],
+  [
+   "thox-ai/thoxedge-0.5b (:q4_k_m, :latest)",
+   "The Wave B build (pushed October 28, 2026)",
+   "S9"
+  ],
+  [
+   "thox-ai/thoxflux-350m",
+   "The Wave B build (pushed October 28, 2026)",
+   "S9"
+  ],
+  [
+   "thox-ai/thoxnano-360m",
+   "The Wave B build (pushed October 28, 2026)",
+   "S9"
+  ],
+  [
+   "thox-ai/thoxnano-135m",
+   "The Wave B build (pushed October 28, 2026)",
+   "S9"
+  ],
+  [
+   "thox-ai/thoxclip-qwen3-0.6b",
+   "The finishing build of Section 11.7 (pushed October 28, 2026)",
+   "S9"
+  ],
+  [
+   "thox-ai/thoxedge-0.8b (:q4_k_m, :latest)",
+   "The Wave C build: the tag was superseded on October 29, 2026 by the Wave C flagship push (registry layer SHA-256 8ef0900d1f76da67442dca354a778517ddc008b9f73926df874f7f3dff5d5625), which replaced the Wave A build the tag had served until then. The Wave B artifact was never published to this tag",
+   "Wave C finishing record"
+  ],
+  [
+   "Pilot adapter",
+   "No Ollama publication; Hugging Face only",
+   "S1/S2"
+  ]
+ ],
+ [
+  [
+   "Field",
+   "Pilot (job 6ae105dc41e90535df7686b7)",
+   "Wave A edge runs (HF Jobs)",
+   "Wave B retrains (KnightHub local)",
+   "ThoxClip-Qwen3-0.6B (KnightHub local)"
+  ],
+  [
+   "Trainer",
+   "train_lfm3_text_sft.py (dataset-repo bundle)",
+   "train_edge_sft.py at commit c250f9bb1b8e20b71f5c38c73ccfbcdac6a0303e",
+   "train_wave_b.py (no repository commit)",
+   "train_clip_cpu.py (trainer commit c250f9bb1b8e20b71f5c38c73ccfbcdac6a0303e)"
+  ],
+  [
+   "Base revision SHA",
+   "not recorded",
+   "not recorded",
+   "not recorded",
+   "c1899de289 (short form, as recorded on the card)"
+  ],
+  [
+   "LoRA rank / alpha / dropout",
+   "16 / 32 / 0.05",
+   "32 / 64 / 0.05",
+   "32 / 64 / 0.05",
+   "32 / alpha not recorded / dropout not recorded (card records rank 32)"
+  ],
+  [
+   "Learning rate / warmup",
+   "5e-5 / warmup_steps 0.1 (ratio form)",
+   "1e-4 / warmup_steps 0.05 (ratio form)",
+   "1e-4 / warmup_steps 0.05 (ratio form)",
+   "1e-4 / not recorded"
+  ],
+  [
+   "Epochs / rows",
+   "30 / 35",
+   "3 / 205",
+   "3 / 982",
+   "3 / 205"
+  ],
+  [
+   "Batch size (per device) / grad accum",
+   "4 / 1",
+   "8 / 1",
+   "8 / 1",
+   "not recorded"
+  ],
+  [
+   "Max sequence length",
+   "1024",
+   "1024",
+   "1024",
+   "not recorded"
+  ],
+  [
+   "Packing",
+   "not set in the script",
+   "False",
+   "False",
+   "not recorded"
+  ],
+  [
+   "Loss masking",
+   "full sequence (no completion-only setting)",
+   "full sequence (no completion-only setting)",
+   "completion-only (completion_only_loss=True)",
+   "not recorded"
+  ],
+  [
+   "Precision",
+   "fp16 load (T4)",
+   "fp16 load; bf16 only where the flavor supported it",
+   "fp32 weights, bf16 autocast (RTX 4060 Ti)",
+   "fp32, bf16 autocast (CPU)"
+  ],
+  [
+   "Chat template",
+   "base native",
+   "Qwen and LFM bases native; SmolLM bases none shipped, ChatML fallback",
+   "same per base as Wave A",
+   "base native"
+  ],
+  [
+   "Seed",
+   "not recorded (not set in the script)",
+   "not recorded (not set in the script)",
+   "42 (set in the script)",
+   "not recorded"
+  ],
+  [
+   "Package versions",
+   "not recorded",
+   "transformers resolved 5.21, TRL 1.16.0 (verified from the resolved wheels, S2); huggingface_hub 1.8.0 (Mac) / 2.1.1 (local) on the upload path",
+   "not recorded (local environment)",
+   "not recorded"
+  ],
+  [
+   "Recorded runtimes",
+   "launch #6: 217 s",
+   "ThoxFlux-350M pathfinder #5: 204 s; Nano relaunches 211 s / 192 s; ThoxEdge followers: not recorded",
+   "49 to 207 s per model (S9: Edge-0.5B 102 s, Edge-0.8B 207 s, Nano-360M 113 s, Flux 49 s, Nano-135M 110 s)",
+   "not recorded"
+  ]
+ ],
+ [
+  [
+   "Model",
+   "Pre-training repository state",
+   "Date"
+  ],
+  [
+   "ThoxFlux-350M",
+   "b5e34a706adab7ed6fdba4de645c1b2e71f05a3d (GGUF inside dates from the 2026-08-11 repack)",
+   "2026-10-24"
+  ],
+  [
+   "ThoxEdge-0.8B",
+   "card commit b7aaf4ee65c4bd7c8ca56dd1d0d70efab16aa61d",
+   "2026-10-24"
+  ],
+  [
+   "ThoxEdge-0.5B",
+   "card commit e2923ec90cb9350e481d243e9fb380c93bad66dc",
+   "2026-10-24"
+  ],
+  [
+   "ThoxNano-360M",
+   "aacb034dbbadcb95501758988833b57537fda66b",
+   "2026-10-24"
+  ],
+  [
+   "ThoxNano-135M",
+   "356921bbd501272dc565726b15c4994494bdcc75",
+   "2026-10-24"
+  ]
+ ]
+]

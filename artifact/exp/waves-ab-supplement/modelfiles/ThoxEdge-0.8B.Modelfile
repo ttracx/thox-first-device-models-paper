@@ -1,0 +1,20 @@
+# Ollama Modelfile for the trained Q4_K_M GGUF in this repo.
+FROM ./ThoxEdge-0.8B.Q4_K_M.gguf
+
+# ChatML — matches the Qwen3.5 base tokenizer's chat template, the
+# format the fine-tune was trained in. Re-verify against the trained
+# repo's tokenizer_config.json at push time (PUSH-CHECKLIST step 3).
+TEMPLATE """{{- if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}{{- range .Messages }}<|im_start|>{{ .Role }}
+{{ .Content }}<|im_end|>
+{{ end }}<|im_start|>assistant
+"""
+PARAMETER stop "<|im_end|>"
+PARAMETER temperature 0.6
+PARAMETER top_p 0.9
+PARAMETER num_ctx 4096
+
+SYSTEM """You are a THOX device assistant running on ThoxMini. Answer in the THOX house voice and route device actions through the THOX tool conventions you were trained on."""
+
+LICENSE """Apache License 2.0. Base model: Qwen/Qwen3.5-0.8B (Apache-2.0). Fine-tune by THOX.ai, trained 2026-10-27."""

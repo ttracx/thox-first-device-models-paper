@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "First Device Models, Trained In-House"
+type: article
+version: 3.0
+date-released: 2026-11-04
+authors:
+  - family-names: Weaving
+    given-names: Sadie
+    affiliation: "THOX.ai"
+    email: "Sadie@thox.ai"
+  - family-names: Xaypanya
+    given-names: Tommy
+    affiliation: "THOX.ai"
+    orcid: "https://orcid.org/0009-0000-4425-9565"
+    email: "tommy@thox.ai"
+publisher:
+  name: "THOX.ai"
+license: "CC-BY-4.0"
+abstract: "On October 27, 2026 — Kickstarter launch day — THOX built its in-house training rails and produced its first device models with them: a voice-command LoRA pilot on LFM3-1.7B (held-out: 1/14 function names, 0/14 full exact matches — pipeline evidence, not a production adapter) and a five-model edge wave gated by the 49-question GATE49 factuality gate. Every gate verdict in Waves A and B is FAIL under the gate's zero-hard-failure policy; the paper reports verified recall (of 12) as the primary figure beside each total. Wave B (982-row corpus) took ThoxEdge-0.5B from 21/49 to 47/49 (verified 11/12) against a constant-abstainer floor of 25/49; ThoxEdge-0.8B's Wave B artifact was never validly measured and was held. An eleven-class failure taxonomy, a model-card rule, and a full provenance register accompany the results. This Third Edition is a Process v1.0 reissue of the Second Edition (hardened v2.1, 2026-10-30) in the THOX Research Paper Template v1.0, content unchanged except the recorded sweep and edition changes."
+keywords:
+  - "on-device AI"
+  - "model factuality"
+  - "evaluation gates"
+  - "fine-tuning"
+  - "LoRA"
+  - "THOX"
+notes: "Third Edition (v3.0), Process v1.0 reissue (2026-11-04) of the Second Edition, hardened paper-version 2.1 (2026-10-30). Byline as published in the second edition, finalized under Tommy Xaypanya's ruling of 2026-11-04: Sadie Weaving (preparer); Tommy Xaypanya (accountable human author, corresponding author). The DOI of record is recorded in the pack HANDOFF.md and the THOX research-publishing pipeline manifest."

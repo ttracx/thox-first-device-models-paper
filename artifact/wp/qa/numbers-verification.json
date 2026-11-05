@@ -1,0 +1,437 @@
+{
+ "total": 86,
+ "passed": 86,
+ "failed": [],
+ "checks": [
+  {
+   "check": "abstainer re-derived",
+   "pass": true,
+   "detail": "25/49 mean 3.531 hard 0"
+  },
+  {
+   "check": "abstainer split verified",
+   "pass": true,
+   "detail": "[1, 12]"
+  },
+  {
+   "check": "abstainer split unknown",
+   "pass": true,
+   "detail": "[23, 26]"
+  },
+  {
+   "check": "abstainer split known_false",
+   "pass": true,
+   "detail": "[0, 10]"
+  },
+  {
+   "check": "abstainer split pricing",
+   "pass": true,
+   "detail": "[1, 1]"
+  },
+  {
+   "check": "pilot artifact fields",
+   "pass": true,
+   "detail": "name_accuracy 0.07142857142857142, exact 0.0"
+  },
+  {
+   "check": "S8 record ThoxEdge-0.5B",
+   "pass": true,
+   "detail": "21/49 mean 2.837 hard 11"
+  },
+  {
+   "check": "S8 record ThoxEdge-0.8B",
+   "pass": true,
+   "detail": "19/49 mean 2.714 hard 11"
+  },
+  {
+   "check": "S8 record ThoxFlux-350M",
+   "pass": true,
+   "detail": "4/49 mean 0.898 hard 33"
+  },
+  {
+   "check": "S8 record ThoxNano-135M",
+   "pass": true,
+   "detail": "2/49 mean 0.816 hard 32"
+  },
+  {
+   "check": "S8 ThoxNano-360M ERROR state",
+   "pass": true,
+   "detail": "record carries the error state"
+  },
+  {
+   "check": "S9 record ThoxEdge-0.5B total+mean",
+   "pass": true,
+   "detail": "47/49 mean 4.837"
+  },
+  {
+   "check": "S9 record ThoxEdge-0.5B splits",
+   "pass": true,
+   "detail": "verified 11/12, unknown 26/26, known_false 10/10, pricing 0/1"
+  },
+  {
+   "check": "S9 record ThoxFlux-350M total+mean",
+   "pass": true,
+   "detail": "20/49 mean 2.49"
+  },
+  {
+   "check": "S9 record ThoxFlux-350M splits",
+   "pass": true,
+   "detail": "verified 3/12, unknown 9/26, known_false 8/10, pricing 0/1"
+  },
+  {
+   "check": "S9 record ThoxNano-360M total+mean",
+   "pass": true,
+   "detail": "23/49 mean 2.959"
+  },
+  {
+   "check": "S9 record ThoxNano-360M splits",
+   "pass": true,
+   "detail": "verified 3/12, unknown 17/26, known_false 2/10, pricing 1/1"
+  },
+  {
+   "check": "S9 record ThoxNano-135M total+mean",
+   "pass": true,
+   "detail": "23/49 mean 3.0"
+  },
+  {
+   "check": "S9 record ThoxNano-135M splits",
+   "pass": true,
+   "detail": "verified 1/12, unknown 14/26, known_false 7/10, pricing 1/1"
+  },
+  {
+   "check": "S9 ThoxEdge-0.8B invalid state",
+   "pass": true,
+   "detail": "record carries the invalid measurement"
+  },
+  {
+   "check": "S9 record ThoxClip-Qwen3-0.6B total+mean",
+   "pass": true,
+   "detail": "22/49 mean 2.776"
+  },
+  {
+   "check": "S9 record ThoxClip-Qwen3-0.6B splits",
+   "pass": true,
+   "detail": "verified 2/12, unknown 11/26, known_false 9/10, pricing 0/1"
+  },
+  {
+   "check": "S9/paper loss ThoxEdge-0.5B",
+   "pass": true,
+   "detail": "0.7093"
+  },
+  {
+   "check": "S9/paper loss ThoxEdge-0.8B",
+   "pass": true,
+   "detail": "0.5466"
+  },
+  {
+   "check": "S9/paper loss ThoxNano-360M",
+   "pass": true,
+   "detail": "1.515"
+  },
+  {
+   "check": "S9/paper loss ThoxFlux-350M",
+   "pass": true,
+   "detail": "1.6682"
+  },
+  {
+   "check": "S9/paper loss ThoxNano-135M",
+   "pass": true,
+   "detail": "1.6403"
+  },
+  {
+   "check": "S9 Clip record",
+   "pass": true,
+   "detail": "Clip 22/49, 2.776, 14 hard"
+  },
+  {
+   "check": "printed figure '21/49'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '19/49'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '4/49'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '2/49'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '47/49'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '20/49'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '23/49'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '22/49'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '25/49'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '2.837'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '2.714'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '0.898'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '0.816'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '4.837'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '2.959'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '2.776'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '3.531'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '982'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '838'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '144'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '205'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '$2.50'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '$1.00'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '$0.40'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '0.7614'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '1/14'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '0/14'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '11/12'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure 'c250f9bb'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '6ae15d7a41e90535df76ddfa'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '6ae15d7a41e90535df76ddfc'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '7526e4014ff8ed4e'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '229,309,120'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '3b375f2971342c2c'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '529,289,280'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '2192b7b4f2d19c25'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '397,805,088'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '18cb1f5e83ecabe8'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '270,590,080'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure 'aff370028ff25d5d'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "printed figure '105,453,664'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "AB-1 s.1 enumeration: private repository authorization",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "AB-1 s.1 enumeration: remote code trust",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "AB-1 s.1 enumeration: a removed training configuration argument",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "AB-1 s.1 enumeration: a dataset shape contract",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "AB-1 s.1 enumeration: an unsupported numeric precision",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "AB-1 s.1 enumeration: a positional upload call",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "AB-1 s.1 enumeration: a tokenizer chat template contract",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "AB-1 s.1 enumeration: the removed configuration argument recurring",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "AB-1 s.1 enumeration: a tokenizer handoff defect",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "AB-1 s.1 enumeration: a model-load dependency defect",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "AB-1 s.1 enumeration: the factory finisher's breakage",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "AB-1 s.6.2 table has 11 classes",
+   "pass": true,
+   "detail": "11 rows"
+  },
+  {
+   "check": "AB-1 s.6.2 class 7 is the chat-template contract",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "AB-1 s.6.5 counts eleven in four categories",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "AB-1 s.10.3 relaunch jobs present",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "AB-1 s.10.5 fix commit present",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "AB-1 S2 is the edge status record",
+   "pass": true,
+   "detail": ""
+  }
+ ]
+}

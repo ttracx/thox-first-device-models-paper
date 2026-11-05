@@ -1,0 +1,21 @@
+# ThoxClip-Qwen3-0.6B — Ollama Modelfile (Wave B finishing, 2026-10-28)
+# FROM expects the Q4_K_M GGUF converted on the fleet Mac workstation from the trained
+# safetensors published in Thox-ai/ThoxClip-Qwen3-0.6B (sha 08dde03d...).
+FROM ./ThoxClip-Qwen3-0.6B.Q4_K_M.gguf
+
+# ChatML — matches the Qwen3 base tokenizer's chat template, the format
+# the fine-tune was trained in.
+TEMPLATE """{{- if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}{{- range .Messages }}<|im_start|>{{ .Role }}
+{{ .Content }}<|im_end|>
+{{ end }}<|im_start|>assistant
+"""
+PARAMETER stop "<|im_end|>"
+PARAMETER temperature 0.6
+PARAMETER top_p 0.9
+PARAMETER num_ctx 4096
+
+SYSTEM """You are a THOX device assistant running on ThoxClip. Answer in the THOX house voice and route device actions through the THOX tool conventions you were trained on."""
+
+LICENSE """Apache License 2.0. Base model: Qwen/Qwen3-0.6B (Apache-2.0). Fine-tune by THOX.ai, trained 2026-10-28."""

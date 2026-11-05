@@ -1,0 +1,419 @@
+{
+ "tier1_internal_identifier_hits": [],
+ "tier2_shipped_paper_hits": [],
+ "tier3_evidence_content_hits_adjudicated": [
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/data/thox_facts.json",
+   "pattern": "CONFIDENTIAL",
+   "context": " { \"topic\": \"ownership_equity_splits\", \"status\": \"CONFIDENTIAL\", \"must_not_say\": \"Any ownership percentage or me",
+   "adjudication": "The facts package's own field value / the grounding prompt's topic classification (the gate's data semantics; already public in the supplement). Not a document mark."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "completed|announced)\\b\"                 rf\"{_SENT}{{0,30}}?\\b(?:series\\s+[a-f]|round|funding)\\b|\"           ",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "            rf\"\\b(?:series\\s+[a-f]|round)\\b{_SENT}{{0,20}}?\\b(?:was|has been|is)\\s+\"                 r\"(?:cl",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "o (?:thox|founding))\\b\"                 rf\"{_SENT}{{0,30}}?\\b(?:nvidia|google|apple|meta|amazon|microsoft|in",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "aster'?s?|doctorate)\\b\"                 rf\"{_SENT}{{0,40}}?\\b(?:in|from|at)\\b|\"                 r\"\\b(?:gradu",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "ch|oxford|\"                 rf\"cambridge)\\b{_SENT}{{0,25}}?\\b(?:degree|graduate|alum|phd|educated|studied)\\b",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "hd|educated|studied)\\b\"                 rf\"{_SENT}{{0,25}}?\\b(?:mit|stanford|harvard|berkeley|carnegie mello",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "unded|built|ran|led)\\b\"                 rf\"{_SENT}{{0,30}}?\\b(?:ThoxAir|MagStack|MeshStack|ThoxNova|ThoxMini",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "Key|ThoxCore|ThoxOS)\\b\"                 rf\"{_SENT}{{0,30}}?\\bbefore\\b\",                 kind=\"fabrication\", ",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "                 rf\"\\b(?:in|back in)\\s+(?:19|20)\\d{{2}}\\b{_SENT}{{0,30}}\"                 r\"(?:founded|in",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "   rf\"\\b(?:in|back in)\\s+(?:19|20)\\d{{2}}\\b{_SENT}{{0,30}}\"                 r\"(?:founded|incorporated|establ",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "  rf\"(?:revenue|arr|annual recurring|sales){_SENT}{{0,30}}{_MONEY}|\"                 rf\"{_MONEY}{_SENT}{{0,3",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": ",30}}{_MONEY}|\"                 rf\"{_MONEY}{_SENT}{{0,30}}(?:revenue|arr|in sales)\",                 kind=\"f",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "es an ownership percentage\",                 rf\"\\d{{1,3}}\\s*(?:%|percent){_SENT}{{0,40}}\"                 r",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "               rf\"\\d{{1,3}}\\s*(?:%|percent){_SENT}{{0,40}}\"                 r\"(?:own|stake|equity|membership",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "own|stake|equity|membership interest|holds){_SENT}{{0,40}}\\d{{1,3}}\\s*(?:%|percent)\",                 kind=\"",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "equity|membership interest|holds){_SENT}{{0,40}}\\d{{1,3}}\\s*(?:%|percent)\",                 kind=\"fabricati",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "e copula.                 rf\"\\b(?:{swap})\\b{_SENT}{{0,20}}?\\b(?:is|was|serves as|acts as|remains)\\b\"        ",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "?{short}\\b|\"                 rf\"\\b{short}\\b{_SENT}{{0,25}}?\\b(?:is|was)\\b\\s+(?:the\\s+)?\"                 rf\"",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "s|was)\\b\\s+(?:the\\s+)?\"                 rf\"{_SENT}{{0,15}}?\\b(?:{swap})\\b\",                 kind=\"contradict",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "e|individuals)\"                         rf\"{_SENT}{{0,40}}{re.escape(other)}\",                         kind=",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "distributed)\\b\"                         rf\"{_SENT}{{0,25}}?\\b(?:proprietary|closed[- ]source)\\b|\"           ",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "    rf\"\\b(?:proprietary|closed[- ]source)\\b{_SENT}{{0,15}}?\\b(?:licen[cs]e|software)\\b\",                    ",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/grounding_system.txt",
+   "pattern": "CONFIDENTIAL",
+   "context": " count, or units sold. - ownership equity splits (CONFIDENTIAL). Any ownership percentage or membership interest",
+   "adjudication": "The facts package's own field value / the grounding prompt's topic classification (the gate's data semantics; already public in the supplement). Not a document mark."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/run_gate49_job.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "           \"{% for m in messages %}\"             \"{{ '<|im_start|>' + m['role'] + '\\\\n' + m['content'] + '<|im_end|>' + '\\\\n' }}\"             \"{% endfor %}\"             \"{% if ad",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/gate49/run_gate49_job.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "or %}\"             \"{% if add_generation_prompt %}{{ '<|im_start|>assistant\\\\n' }}{% endif %}\"         )     return tok   def load_m",
+   "adjudication": "Gate source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxClip-Qwen3-0.6B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "ormat # the fine-tune was trained in. TEMPLATE \"\"\"{{- if .System }}<|im_start|>system {{ .System }}<|im_end|> {{ end ",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxClip-Qwen3-0.6B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": ". TEMPLATE \"\"\"{{- if .System }}<|im_start|>system {{ .System }}<|im_end|> {{ end }}{{- range .Messages }}<|im_sta",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxClip-Qwen3-0.6B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "stem }}<|im_start|>system {{ .System }}<|im_end|> {{ end }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxClip-Qwen3-0.6B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "im_start|>system {{ .System }}<|im_end|> {{ end }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxClip-Qwen3-0.6B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "_end|> {{ end }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {{ end }}<|im_start|>ass",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxClip-Qwen3-0.6B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "d }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {{ end }}<|im_start|>assistant \"\"\" PARA",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxClip-Qwen3-0.6B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {{ end }}<|im_start|>assistant \"\"\" PARAMETER stop \"<|im_end",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxEdge-0.5B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "at push time (PUSH-CHECKLIST step 3). TEMPLATE \"\"\"{{- if .System }}<|im_start|>system {{ .System }}<|im_end|> {{ end ",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxEdge-0.5B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": ". TEMPLATE \"\"\"{{- if .System }}<|im_start|>system {{ .System }}<|im_end|> {{ end }}{{- range .Messages }}<|im_sta",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxEdge-0.5B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "stem }}<|im_start|>system {{ .System }}<|im_end|> {{ end }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxEdge-0.5B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "im_start|>system {{ .System }}<|im_end|> {{ end }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxEdge-0.5B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "_end|> {{ end }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {{ end }}<|im_start|>ass",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxEdge-0.5B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "d }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {{ end }}<|im_start|>assistant \"\"\" PARA",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxEdge-0.5B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {{ end }}<|im_start|>assistant \"\"\" PARAMETER stop \"<|im_end",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxEdge-0.8B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "at push time (PUSH-CHECKLIST step 3). TEMPLATE \"\"\"{{- if .System }}<|im_start|>system {{ .System }}<|im_end|> {{ end ",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxEdge-0.8B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": ". TEMPLATE \"\"\"{{- if .System }}<|im_start|>system {{ .System }}<|im_end|> {{ end }}{{- range .Messages }}<|im_sta",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxEdge-0.8B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "stem }}<|im_start|>system {{ .System }}<|im_end|> {{ end }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxEdge-0.8B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "im_start|>system {{ .System }}<|im_end|> {{ end }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxEdge-0.8B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "_end|> {{ end }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {{ end }}<|im_start|>ass",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxEdge-0.8B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "d }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {{ end }}<|im_start|>assistant \"\"\" PARA",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxEdge-0.8B.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {{ end }}<|im_start|>assistant \"\"\" PARAMETER stop \"<|im_end",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxFlux-350M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": " have changed across releases before. TEMPLATE \"\"\"{{- if .System }}<|im_start|>system {{ .System }}<|im_end|> {{ end ",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxFlux-350M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": ". TEMPLATE \"\"\"{{- if .System }}<|im_start|>system {{ .System }}<|im_end|> {{ end }}{{- range .Messages }}<|im_sta",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxFlux-350M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "stem }}<|im_start|>system {{ .System }}<|im_end|> {{ end }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxFlux-350M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "im_start|>system {{ .System }}<|im_end|> {{ end }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxFlux-350M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "_end|> {{ end }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {{ end }}<|im_start|>ass",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxFlux-350M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "d }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {{ end }}<|im_start|>assistant \"\"\" PARA",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxFlux-350M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {{ end }}<|im_start|>assistant \"\"\" PARAMETER stop \"<|im_end",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxNano-135M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "recorded in WAVE-STATUS.md check #6). TEMPLATE \"\"\"{{- if .System }}<|im_start|>system {{ .System }}<|im_end|> {{ end ",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxNano-135M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": ". TEMPLATE \"\"\"{{- if .System }}<|im_start|>system {{ .System }}<|im_end|> {{ end }}{{- range .Messages }}<|im_sta",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxNano-135M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "stem }}<|im_start|>system {{ .System }}<|im_end|> {{ end }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxNano-135M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "im_start|>system {{ .System }}<|im_end|> {{ end }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxNano-135M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "_end|> {{ end }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {{ end }}<|im_start|>ass",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxNano-135M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "d }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {{ end }}<|im_start|>assistant \"\"\" PARA",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxNano-135M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {{ end }}<|im_start|>assistant \"\"\" PARAMETER stop \"<|im_end",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxNano-360M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "recorded in WAVE-STATUS.md check #6). TEMPLATE \"\"\"{{- if .System }}<|im_start|>system {{ .System }}<|im_end|> {{ end ",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxNano-360M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": ". TEMPLATE \"\"\"{{- if .System }}<|im_start|>system {{ .System }}<|im_end|> {{ end }}{{- range .Messages }}<|im_sta",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxNano-360M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "stem }}<|im_start|>system {{ .System }}<|im_end|> {{ end }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxNano-360M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "im_start|>system {{ .System }}<|im_end|> {{ end }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxNano-360M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "_end|> {{ end }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {{ end }}<|im_start|>ass",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxNano-360M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "d }}{{- range .Messages }}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {{ end }}<|im_start|>assistant \"\"\" PARA",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  },
+  {
+   "file": "exp/waves-ab-supplement/modelfiles/ThoxNano-360M.Modelfile",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "}<|im_start|>{{ .Role }} {{ .Content }}<|im_end|> {{ end }}<|im_start|>assistant \"\"\" PARAMETER stop \"<|im_end",
+   "adjudication": "Ollama/Go template syntax in the serving Modelfiles / records (the serving layer's own syntax). Evidence content."
+  }
+ ],
+ "byline": "FINALIZED 2026-11-04 under Tommy Xaypanya's ruling: second-edition authorship as published (Sadie Weaving, preparer; Tommy Xaypanya, accountable human author); legacy authorship disclosure retained verbatim",
+ "byline_placeholder_present": false,
+ "byline_final_present": true,
+ "verdict": "PASS",
+ "files_scanned": 40
+}

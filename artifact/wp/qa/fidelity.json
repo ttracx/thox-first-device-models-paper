@@ -1,0 +1,13 @@
+{
+ "table_fidelity": {
+  "docx_tables": 27,
+  "md_tables": 27,
+  "cells_compared": 754,
+  "cell_mismatches": []
+ },
+ "paragraph_fidelity": {
+  "paras": 400,
+  "missing": []
+ },
+ "verdict": "PASS"
+}

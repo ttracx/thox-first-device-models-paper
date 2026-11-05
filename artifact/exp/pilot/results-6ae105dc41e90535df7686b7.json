@@ -1,0 +1,105 @@
+{
+  "train_rows": 35,
+  "heldout": [
+    {
+      "split": "heldout",
+      "gold": "{\"name\":\"device.set_mode\",\"arguments\":{\"device\":\"ThoxClip\",\"mode\":\"low power\"}}",
+      "pred": "</think>{\"name\":\"device.set_mode\",\"arguments\":{\"device\":\"ThoxClip\",\"mode\":\"low\"}}",
+      "name_ok": true,
+      "full_ok": false
+    },
+    {
+      "split": "heldout",
+      "gold": "{\"name\":\"device.set_mode\",\"arguments\":{\"device\":\"ThoxClip\",\"mode\":\"low power\"}}",
+      "pred": "</think>{\"name\":\"device.set_power\",\"arguments\":{\"device\":\"ThoxClip\",\"mode\":\"low\"}}",
+      "name_ok": false,
+      "full_ok": false
+    },
+    {
+      "split": "heldout",
+      "gold": "{\"name\":\"reminders.create\",\"arguments\":{\"text\":\"call Craig\",\"when\":\"at 3 PM\"}}",
+      "pred": "</think>{\"name\":\"notes.capture\",\"arguments\":{\"text\":\"Remind me to call Craig at 3 PM.\",\"device_hint\":\"ThoxClip\"}}",
+      "name_ok": false,
+      "full_ok": false
+    },
+    {
+      "split": "heldout",
+      "gold": "{\"name\":\"reminders.create\",\"arguments\":{\"text\":\"review the Kickstarter page\",\"when\":\"tonight\"}}",
+      "pred": "</think>{\"name\":\"notes.ccreate\",\"arguments\":{\"text\":\"Review the Kickstarter page.\",\"period\":\"evening.\"}}",
+      "name_ok": false,
+      "full_ok": false
+    },
+    {
+      "split": "heldout",
+      "gold": "{\"name\":\"reminders.create\",\"arguments\":{\"text\":\"ship the dev kits\",\"when\":\"on Friday\"}}",
+      "pred": "</think>{\"name\":\"notes.capture\",\"arguments\":{\"text\":\"Remind me to ship the dev kits on Friday.\",\"device_hint\":\"ThoxClip\"}}",
+      "name_ok": false,
+      "full_ok": false
+    },
+    {
+      "split": "heldout",
+      "gold": "{\"name\":\"thoxmind.route_advice\",\"arguments\":{\"context\":\"current_request\"}}",
+      "pred": "</think>{\"name\":\"mesh.device_status\",\"arguments\":{\"device\":\"ThoxClip\"}}",
+      "name_ok": false,
+      "full_ok": false
+    },
+    {
+      "split": "heldout",
+      "gold": "{\"name\":\"thoxmind.route_advice\",\"arguments\":{\"context\":\"current_request\"}}",
+      "pred": "</think>{\"name\":\"mesh.device_status\",\"arguments\":{\"local\":\"true\"}}",
+      "name_ok": false,
+      "full_ok": false
+    },
+    {
+      "split": "heldout",
+      "gold": "{\"name\":\"vision.describe\",\"arguments\":{\"input\":\"camera_or_photo\"}}",
+      "pred": "</think>{\"name\":\"image.metadata\",\"arguments\":{\"source\":\"the most recent photo\"}}",
+      "name_ok": false,
+      "full_ok": false
+    },
+    {
+      "split": "heldout",
+      "gold": "{\"name\":\"vision.describe\",\"arguments\":{\"input\":\"camera_or_photo\"}}",
+      "pred": "</think>{\"name\":\"content.generate\",\"arguments\":{\"source\":\"the user\",\"kind\":\"mesh\"}}",
+      "name_ok": false,
+      "full_ok": false
+    },
+    {
+      "split": "heldout",
+      "gold": "{\"name\":\"vision.describe\",\"arguments\":{\"input\":\"camera_or_photo\"}}",
+      "pred": "</think>{\"name\":\"image.generate\",\"arguments\":{\"source\":\"my desk\"}}",
+      "name_ok": false,
+      "full_ok": false
+    },
+    {
+      "split": "heldout",
+      "gold": "{\"name\":\"audio.transcribe\",\"arguments\":{\"language\":\"English\"}}",
+      "pred": "</think>{\"name\":\"transcribe\",\"arguments\":{\"source\":\"the recording\"}}",
+      "name_ok": false,
+      "full_ok": false
+    },
+    {
+      "split": "heldout",
+      "gold": "{\"name\":\"audio.translate\",\"arguments\":{\"target_language\":\"Spanish\"}}",
+      "pred": "</think>{\"name\":\"translate\",\"arguments\":{\"source\":\"What is this device for?\",\"target\":\"Spanish\"}}",
+      "name_ok": false,
+      "full_ok": false
+    },
+    {
+      "split": "heldout_unseen_function",
+      "gold": "{\"name\":\"timer.start\",\"arguments\":{\"minutes\":10}}",
+      "pred": "</think>{\"name\":\"notifications.set\",\"arguments\":{\"identifier\":\"my_timer\",\"period\":\"10m\"}}",
+      "name_ok": false,
+      "full_ok": false
+    },
+    {
+      "split": "heldout_unseen_function",
+      "gold": "{\"name\":\"timer.start\",\"arguments\":{\"minutes\":5}}",
+      "pred": "</think>{\"name\":\"monitor.calibrate\",\"arguments\":{\"device\":\"ThoxClip\",\"duration\":5}}",
+      "name_ok": false,
+      "full_ok": false
+    }
+  ],
+  "name_accuracy": 0.07142857142857142,
+  "full_exact_match": 0.0
+}

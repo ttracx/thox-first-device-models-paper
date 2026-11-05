@@ -1,0 +1,23 @@
+{
+ "paper-1280": {
+  "scrollW": 1280,
+  "innerW": 1280,
+  "title": "First Device Models, Trained In-House — THOX First Device Models Whitepaper v3.0 (Third Edition)"
+ },
+ "paper-390": {
+  "scrollW": 390,
+  "innerW": 390,
+  "title": "First Device Models, Trained In-House — THOX First Device Models Whitepaper v3.0 (Third Edition)"
+ },
+ "demo-1280": {
+  "scrollW": 1280,
+  "innerW": 1280,
+  "title": "GATE49 Wave Explorer — First Device Models (THOX Whitepaper, Third Edition)"
+ },
+ "demo-interaction": "fact-entity-jurisdiction\ncategory: verified · score: 2/5 · passed: false · hard failure: false",
+ "demo-390": {
+  "scrollW": 390,
+  "innerW": 390,
+  "title": "GATE49 Wave Explorer — First Device Models (THOX Whitepaper, Third Edition)"
+ }
+}
